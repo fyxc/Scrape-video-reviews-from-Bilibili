@@ -1,7 +1,7 @@
 # Scrape-video-reviews-from-Bilibili
 It is a simple way to scrape reviews from Video in Bilibili. You can specify the searching keyword, the time threshold, and the number of reviews threshold
 
-Argument Explanation
+## Argument Explanation:
 
 Keyword: The word you put in the search box on the Bilibili website. This program will iterate all video exists in the searching result
 
