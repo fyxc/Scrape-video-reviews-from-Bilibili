@@ -34,12 +34,12 @@ def releventVideo(keyword, review_threshold, time_threshold):
         json_text = json.loads(text)
         # iterate and get aid and topic info
         for m in json_text["data"]["result"]:
-            video_info.append([m['title'], m['tag'], m['author'], m['play'], m['review'],
-                               time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(m['senddate'])),
-                               m['typename'], m['arcurl']])
             if m['review'] >= review_threshold and time.strftime("%Y-%m-%d %H:%M:%S",
                                                                  time.localtime(m['senddate'])) >= time_threshold:
                 aid_list.append(m["aid"])
+                video_info.append([m['title'], m['tag'], m['author'], m['play'], m['review'],
+                               time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(m['senddate'])),
+                               m['typename'], m['arcurl']])
         ###########################
         # bilibili doesn't allow scrap users data and will detect the scraping process
         # decrease the IP blocked risk
